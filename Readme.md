@@ -76,8 +76,7 @@ cd hindi-asr-api
 # Create model directory
 mkdir -p model
 
-# Download the model from Nvidia NGC and  convert to onnx format
-
+# if you dont have the model file, Download the model from Nvidia NGC and  convert to onnx format
 python setup_model.py
 
 # Place your ONNX model file here
