@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  asr-api:
+    build: .
+    container_name: hindi-asr-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./model:/app/model:ro
+    environment:
+      - MODEL_PATH=/app/model/asr_model_hi.onnx
+      - VOCAB_PATH=/app/model/vocab.txt
+      - MAX_WORKERS=4
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

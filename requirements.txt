@@ -1,0 +1,23 @@
+# Core dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+
+# ML/Audio dependencies
+numpy==1.24.3
+scipy==1.11.4
+librosa==0.10.1
+soundfile==0.12.1
+audioread==3.0.1
+numba==0.58.1
+
+# ONNX Runtime
+onnxruntime==1.16.3
+
+# API dependencies
+pydantic==2.5.0
+
+# Additional audio dependencies that librosa might need
+resampy==0.4.2
+soundfile==0.12.1
+audioread==3.0.1
